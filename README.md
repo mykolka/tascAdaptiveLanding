@@ -1,1 +1,1 @@
-{\rtf1}
+https://mykolka.github.io/tascAdaptiveLanding/
