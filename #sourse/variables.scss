@@ -1,0 +1,40 @@
+//flexColumn
+%fh{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+//flexRow
+%fw{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+//sectionTitle
+%bgrnTitle{				
+			position: relative;
+			font-size: 4.5vw;
+			font-weight: bold;
+			line-height: 97%;
+			text-transform: uppercase;
+			width: 100%;
+			text-align: center;
+			color: #F4F9FC;
+			padding: 0 0 7.7vh;
+			z-index: 6;
+}
+//sectionTitle
+%h1{				
+				position: absolute;
+				top: 2.5vw;
+				font-weight: bold;
+				font-size: 2.5vw;
+				line-height: 87%;
+				text-transform: uppercase;
+				color: #5DADE2;
+				width: 100%;
+				text-align: center;
+				z-index: 4;
+			}
