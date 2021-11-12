@@ -120,6 +120,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  position: relative;
 }
 .WrapperPage main .mainLogo {
   height: 15.4vw;
@@ -339,7 +340,7 @@
   width: 61vw;
   display: -ms-grid;
   display: grid;
-  grid-gap: 2vw 0.8vw;
+  grid-gap: 4vw 0.8vw;
       grid-template-areas: "name email" "phone company" "message message" "btn btn";
 }
 .WrapperPage .contactUs form input {
@@ -352,7 +353,7 @@
   padding-left: 20px;
   border-bottom: 1px solid #2874A6;
   outline: none;
-  font-size: 1vw;
+  font-size: 16px;
 }
 .WrapperPage .contactUs form input:focus::-webkit-input-placeholder {
   text-indent: 1000px;
@@ -364,6 +365,7 @@
   -ms-grid-column: 1;
   grid-area: name;
   background-image: url(../images/icons/nameIcon.png);
+  background-size: contain no-repeat;
 }
 .WrapperPage .contactUs form .phone {
   -ms-grid-row: 3;
@@ -440,7 +442,7 @@
 .WrapperPage footer .logoFooter img {
   position: relative;
   z-index: 7;
-  height: 3.85vw;
+  height: 74px;
 }
 .WrapperPage footer .footerContent {
   height: 7.3vw;
@@ -679,36 +681,4 @@
   .WrapperPage footer .rights {
     font-size: 14px;
   }
-}
-
-#menu {
-  display: none;
-  width: 100%;
-  padding: 58px 16px 31px;
-  background: #FFFFFF;
-}
-
-.menuItem {
-  height: 78px;
-  border-bottom: 0.5px solid #D9D9D9;
-}
-
-.menuItem:last-child {
-  border: none;
-}
-
-.menuItem a {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 24px;
-  color: #202020;
 }

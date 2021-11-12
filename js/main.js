@@ -32,19 +32,67 @@ left.onclick = function() {
 previousItem();
 };
 
-let mobiMenu = document.getElementById("navMobile");
+let mobiMenuBtn = document.getElementById("navMobile");
 let closeBtn = document.getElementById("closeBtn");
-let menu = document.getElementById("menu");
+let mobileMenuBox = document.getElementById("mobileMenuBox");
+let menu = document.createElement('div');
 
-mobiMenu.addEventListener('click', () => {
-	mobiMenu.style.display = 'none';
+
+mobiMenuBtn.addEventListener('click', () => {
+	mobiMenuBtn.style.display = 'none';
 	closeBtn.style.display = 'block';
-	menu.style.display = 'block';
+	
+	menu.innerHTML = `
+		<style>
+
+			#menu{
+				width: 100vw;
+				padding: 58px 16px 31px;
+				background: #FFFFFF;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}	
+			.menuItem{
+				height: 78px;
+				border-bottom:  0.5px solid #D9D9D9;	
+			}	
+			.menuItem a {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				font-weight: 500;
+				font-size: 15px;
+				line-height: 24px;
+				color: #202020;
+			}			
+			.menuItem:last-child{
+				border: none;
+			}	
+
+		</style>
+
+		<div id="menu"> 
+			<div class="menuItem"><a href="#home">Home</a></div>
+			<div class="menuItem"><a href="#about">About Us </a></div>
+			<div class="menuItem"><a href="#services">Services and Expertise </a></div>
+			<div class="menuItem"><a href="#">Product</a></div>
+			<div class="menuItem"><a href="#">Value Proposition</a></div>
+			<div class="menuItem"><a href="#">Case Study</a></div>
+			<div class="menuItem"><a href="#contactUS">Contact Us</a></div>
+		</div>
+
+
+
+	`
+	mobileMenuBox.appendChild(menu);
 })
 
 closeBtn.addEventListener('click', () => {
 	closeBtn.style.display = 'none';
-	mobiMenu.style.display = 'block';
-	menu.style.display = 'none';	
+	mobiMenuBtn.style.display = 'block';
+	menu.innerHTML = ``;
 })
 
