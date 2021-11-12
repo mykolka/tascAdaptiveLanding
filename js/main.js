@@ -52,6 +52,7 @@ mobiMenuBtn.addEventListener('click', () => {
 				position: absolute;
 				top: 0;
 				left: 0;
+				z-index: 8;
 			}	
 			.menuItem{
 				height: 78px;
@@ -83,9 +84,6 @@ mobiMenuBtn.addEventListener('click', () => {
 			<div class="menuItem"><a href="#">Case Study</a></div>
 			<div class="menuItem"><a href="#contactUS">Contact Us</a></div>
 		</div>
-
-
-
 	`
 	mobileMenuBox.appendChild(menu);
 })
