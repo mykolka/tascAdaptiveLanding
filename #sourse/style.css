@@ -356,7 +356,7 @@
   font-size: 16px;
 }
 .WrapperPage .contactUs form input:focus::-webkit-input-placeholder {
-  text-indent: 1000px;
+  text-indent: 2000px;
   -webkit-transition: text-indent 0.6s ease;
   transition: text-indent 0.6s ease;
 }
