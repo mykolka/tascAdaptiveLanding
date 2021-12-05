@@ -243,6 +243,7 @@
   -webkit-box-shadow: 0px 0px 20px #438BBB;
           box-shadow: 0px 0px 20px #438BBB;
   border-radius: 10px;
+  overflow: hidden;
 }
 .WrapperPage .reviews .reviewWrapper .slider .sliderItem {
   display: none;
@@ -256,6 +257,8 @@
           justify-content: flex-start;
   padding: 2vw 5vw;
   height: 100%;
+  -webkit-animation: changeCard 0.2s;
+          animation: changeCard 0.2s;
 }
 .WrapperPage .reviews .reviewWrapper .slider .sliderItemActive .topContent h3 {
   text-transform: uppercase;
@@ -360,6 +363,26 @@
   -webkit-transition: text-indent 0.6s ease;
   transition: text-indent 0.6s ease;
 }
+.WrapperPage .contactUs form input:focus::-moz-placeholder {
+  text-indent: 2000px;
+  -moz-transition: text-indent 0.6s ease;
+  transition: text-indent 0.6s ease;
+}
+.WrapperPage .contactUs form input:focus:-ms-input-placeholder {
+  text-indent: 2000px;
+  -ms-transition: text-indent 0.6s ease;
+  transition: text-indent 0.6s ease;
+}
+.WrapperPage .contactUs form input:focus::-ms-input-placeholder {
+  text-indent: 2000px;
+  -ms-transition: text-indent 0.6s ease;
+  transition: text-indent 0.6s ease;
+}
+.WrapperPage .contactUs form input:focus::placeholder {
+  text-indent: 2000px;
+  -webkit-transition: text-indent 0.6s ease;
+  transition: text-indent 0.6s ease;
+}
 .WrapperPage .contactUs form .name {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -417,6 +440,8 @@
 }
 .WrapperPage .contactUs form input[type=submit]:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .WrapperPage footer {
   padding-top: 4.17vw;
@@ -475,6 +500,26 @@
   font-size: 0.84vw;
   line-height: 156%;
 }
+@-webkit-keyframes changeCard {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes changeCard {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 @media screen and (min-width: 1920px) {
   .WrapperPage .navItem a {
     font-size: 16px;
@@ -483,7 +528,7 @@
     height: 53px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 740px) {
   .WrapperPage header {
     height: 60px;
     padding: 0 16px;

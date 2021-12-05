@@ -181,13 +181,15 @@
 				background: #FFFFFF;
 				box-shadow: 0px 0px 20px #438BBB;
 				border-radius: 10px;
-				.sliderItem{display: none;} 
+				overflow: hidden;
+				.sliderItem{display: none;} 			
 				.sliderItemActive{
 					display: flex;
 					@extend %fh;
 					justify-content: flex-start;
 					padding: 2vw 5vw;
 					height: 100%;
+					animation: changeCard 0.2s;
 					.topContent h3 {
 						text-transform: uppercase;
 						color: #2874A6;
@@ -299,7 +301,7 @@
 		    	border-bottom: 1px solid #2874A6;
 		    	outline: none;
 		    	font-size: 16px;
-		    	&:focus::-webkit-input-placeholder {
+		    	&:focus::placeholder{
 				text-indent: 2000px; 
 				transition: text-indent 0.6s ease;
 				}				
@@ -346,6 +348,7 @@
 				color: #FFFFFF;
 				&:hover{
 					cursor: pointer;
+					transform: scale(1.1);
 				}
 			}		
 		}		
@@ -410,6 +413,12 @@
 			line-height: 156%;
 		}
 	}
+
+	@keyframes  changeCard{
+					0%{transform: translateY(-100%);}					
+					100%{transform: translateY(0);}					
+	}
+
 	@media screen and (min-width: 1920px) {
 		.navItem a {
 			font-size: 16px;
@@ -418,7 +427,8 @@
 			height: 53px;			
 		}
 	}	
-	@media screen and (max-width: 425px) {
+	
+	@media screen and (max-width: 740px) {
 		header {
 			height: 60px;
 			padding: 0 16px;
